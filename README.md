@@ -61,7 +61,10 @@ Overview of GitHub Actions, core CI/CD concepts, and details on the Markdown Lin
 Comprehensive guide to deploying microservices on GCP with Kubernetes, including authentication, API gateway, storage, secrets management, and database deployment.
 
 ### [Kubernetes Fundamentals](deployment/kubernetes/kubernetes-fundamentals.md)
-Kubernetes concepts, deployments, services, ingress, and Helm charts.
+Kubernetes concepts, cluster hierarchy, deployments, services, ingress, and Helm charts.
+
+### [Local to Cloud K8s](deployment/kubernetes/local-to-cloud.md)
+Guide on using Minikube for local development and transitioning to managed cloud services like EKS, GKE, and AKS.
 
 ### [Containerization](deployment/containers/containerization.md)
 Docker best practices, multi-stage builds, and container orchestration.
