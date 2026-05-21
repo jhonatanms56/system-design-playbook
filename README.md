@@ -54,6 +54,9 @@ Read replicas, sharding, partitioning, and database selection criteria.
 
 ## Deployment
 
+### [GitHub Actions CI/CD](deployment/github-actions-ci.md)
+Overview of GitHub Actions, core CI/CD concepts, and details on the Markdown Linting and Link Checking workflows used in this repository.
+
 ### [GCP Kubernetes Deployment](deployment/gcp/gcp-kubernetes-deployment.md)
 Comprehensive guide to deploying microservices on GCP with Kubernetes, including authentication, API gateway, storage, secrets management, and database deployment.
 
