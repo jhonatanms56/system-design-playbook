@@ -38,6 +38,9 @@ Common bottlenecks (database, network, CPU, memory, I/O) and resolution framewor
 ### [Availability Fundamentals](reliability/availability/availability-fundamentals.md)
 Availability targets, redundancy patterns, load balancing, and graceful degradation.
 
+### [Regions vs. Zones](reliability/availability/regions-vs-zones.md)
+Strategic guide on why and how to deploy across multiple availability zones and geographic regions for global scale and resilience.
+
 ### [Fault Tolerance Fundamentals](reliability/fault-tolerance/fault-tolerance-fundamentals.md)
 Circuit breakers, retries with exponential backoff, bulkhead pattern, and chaos engineering.
 
