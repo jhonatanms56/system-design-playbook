@@ -15,6 +15,8 @@ This collection of documentation is designed to be a living knowledge base for s
 - [Security](#security)
 - [Frontend](#frontend)
 - [Monitoring](#monitoring)
+- [Architecture](#architecture)
+- [Backend](#backend)
 - [Real-World Scenarios](#real-world-scenarios)
 
 ## Performance
@@ -90,6 +92,16 @@ OpenTelemetry, span creation, and trace analysis.
 
 ### [Logging](monitoring/logging/logging-best-practices.md)
 Structured logging, log levels, and log aggregation.
+
+## Architecture
+
+### [Request Lifecycle](architecture/request-lifecycle.md)
+Understanding the end-to-end journey of a request, from DNS to database.
+
+## Backend
+
+### [Streams and Lambdas](backend/streams-lambdas-functional.md)
+Functional programming paradigms in modern backend development, featuring Java Streams and functional patterns.
 
 ## Real-World Scenarios
 
