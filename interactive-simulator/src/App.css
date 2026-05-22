@@ -1,0 +1,459 @@
+#root {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: #f8fafc;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+.sidebar {
+  width: 300px;
+  background-color: #ffffff;
+  border-right: 1px solid #e2e8f0;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+  z-index: 10;
+}
+
+.sidebar h2 {
+  font-size: 1.25rem;
+  color: #1e293b;
+  margin: 0 0 10px 0;
+}
+
+.control-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background-color: #f1f5f9;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.control-group:hover {
+  background-color: #e2e8f0;
+}
+
+.control-group label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  cursor: pointer;
+  color: #475569;
+  font-weight: 500;
+}
+
+.flow-container {
+  flex: 1;
+  height: 100%;
+}
+
+/* Node Styles */
+.react-flow__node {
+  border-radius: 8px;
+  padding: 10px;
+  font-weight: bold;
+  text-align: center;
+  border: 2px solid;
+  font-size: 14px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.node-client {
+  background-color: #dcfce7;
+  border-color: #22c55e;
+  color: #166534;
+}
+
+.node-gateway {
+  background-color: #fee2e2;
+  border-color: #ef4444;
+  color: #991b1b;
+}
+
+.node-service {
+  background-color: #dbeafe;
+  border-color: #3b82f6;
+  color: #1e40af;
+}
+
+.node-database {
+  background-color: #fef3c7;
+  border-color: #f59e0b;
+  color: #92400e;
+}
+
+.node-auth {
+  background-color: #f3e8ff;
+  border-color: #a855f7;
+  color: #6b21a8;
+}
+
+.node-kafka {
+  background-color: #1e293b;
+  border-color: #0f172a;
+  color: #f8fafc;
+}
+
+.node-monitor {
+  background-color: #f5f3ff;
+  border-color: #a855f7;
+  color: #6b21a8;
+}
+
+/* Detail Panel Styles */
+.detail-panel {
+  margin-top: 20px;
+  padding: 16px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  max-height: 550px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.detail-section h4 {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: #94a3b8;
+    margin: 0 0 4px 0;
+}
+
+.detail-section.highlight {
+    background-color: #f0f9ff;
+    padding: 10px;
+    border-radius: 8px;
+    border-left: 4px solid #0ea5e9;
+}
+
+.detail-section p {
+  font-size: 0.85rem;
+  color: #334155;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.detail-panel pre {
+  background-color: #1e293b;
+  color: #38bdf8;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  overflow-x: auto;
+  margin: 8px 0 0 0;
+}
+
+.doc-link {
+    padding: 12px;
+    background-color: #f8fafc;
+    border-radius: 8px;
+    border: 1px dashed #cbd5e1;
+    text-align: center;
+}
+
+.doc-link a {
+    color: #2563eb;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.doc-link a:hover {
+    text-decoration: underline;
+}
+
+.close-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #f1f5f9;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.close-btn:hover {
+  background-color: #e2e8f0;
+  color: #1e293b;
+}
+
+.help-text {
+  margin-top: 20px;
+  font-size: 0.875rem;
+  color: #94a3b8;
+  font-style: italic;
+  text-align: center;
+}
+
+.node-redis {
+  background-color: #fef2f2;
+  border-color: #dc2626;
+  color: #991b1b;
+}
+
+.node-database.failed {
+  background-color: #451a03;
+  border-color: #f59e0b;
+  color: #fbbf24;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.6; }
+  100% { opacity: 1; }
+}
+
+.section {
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.section h3 {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #94a3b8;
+    margin-bottom: 12px;
+}
+
+.section.resilience {
+    background-color: #fff7ed;
+    margin: 0 -24px 24px -24px;
+    padding: 24px;
+}
+
+.control-group.failure:hover {
+    background-color: #fee2e2;
+}
+
+.mode-toggle {
+    text-align: center;
+}
+
+.toggle-btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 2px solid #e2e8f0;
+    background: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: #64748b;
+}
+
+.toggle-btn.active {
+    background: #3b82f6;
+    color: white;
+    border-color: #2563eb;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.trace-monitor {
+    background-color: #0f172a;
+    color: #f8fafc;
+    padding: 16px;
+    border-radius: 12px;
+    margin-top: 10px;
+}
+
+.trace-monitor h3 {
+    color: #38bdf8;
+    margin-bottom: 12px;
+}
+
+.trace-card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.trace-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+}
+
+.trace-row code {
+    background: #1e293b;
+    padding: 2px 4px;
+}
+
+.span-name {
+    color: #fbbf24;
+    font-weight: bold;
+}
+
+.latency-val {
+    color: #4ade80;
+    font-weight: bold;
+}
+
+.latency-bar-bg {
+    width: 100%;
+    height: 4px;
+    background: #334155;
+    border-radius: 2px;
+    margin-top: 4px;
+}
+
+.latency-bar-fill {
+    height: 100%;
+    background: #38bdf8;
+    border-radius: 2px;
+    transition: width 0.5s ease-out;
+}
+
+.node-lb {
+  background-color: #f1f5f9;
+  border-color: #94a3b8;
+  color: #1e293b;
+  border-style: dashed;
+}
+
+.control-group.traffic:hover {
+    background-color: #fee2e2;
+}
+
+.control-group.traffic input:checked + label {
+    color: #ef4444;
+}
+
+.cloud-selector {
+    margin-bottom: 20px;
+}
+
+.cloud-chips {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.chip {
+    padding: 8px;
+    border: 1px solid #e2e8f0;
+    background: #f8fafc;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: #64748b;
+}
+
+.chip:hover {
+    background: #f1f5f9;
+}
+
+.chip.active {
+    background: #1e293b;
+    color: white;
+    border-color: #1e293b;
+}
+
+.chip.aws.active { background-color: #ff9900; border-color: #ff9900; color: white; }
+.chip.gcp.active { background-color: #4285f4; border-color: #4285f4; color: white; }
+.chip.azure.active { background-color: #0078d4; border-color: #0078d4; color: white; }
+
+.cloud-banner {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    z-index: 5;
+    transition: all 0.3s;
+    background: transparent;
+}
+
+.cloud-banner.aws { background-color: rgba(255, 153, 0, 0.1); color: #ff9900; border: 1px solid #ff9900; }
+.cloud-banner.gcp { background-color: rgba(66, 133, 244, 0.1); color: #4285f4; border: 1px solid #4285f4; }
+.cloud-banner.azure { background-color: rgba(0, 120, 212, 0.1); color: #0078d4; border: 1px solid #0078d4; }
+
+.detail-header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.cloud-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    width: fit-content;
+}
+
+.cloud-badge.aws { background-color: #fff7ed; color: #c2410c; border: 1px solid #ff9900; }
+.cloud-badge.gcp { background-color: #eff6ff; color: #1d4ed8; border: 1px solid #4285f4; }
+.cloud-badge.azure { background-color: #f0f9ff; color: #0369a1; border: 1px solid #0078d4; }
+
+.detail-section.cloud-info {
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.detail-section.cloud-info.aws { background-color: #fff7ed; border-left: 4px solid #ff9900; }
+.detail-section.cloud-info.gcp { background-color: #eff6ff; border-left: 4px solid #4285f4; }
+.detail-section.cloud-info.azure { background-color: #f0f9ff; border-left: 4px solid #0078d4; }
+
+/* Legend dots */
+.legend {
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.legend h3 {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin-bottom: 12px;
+}
+
+.legend p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.875rem;
+  color: #475569;
+  margin: 8px 0;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot.client { background-color: #22c55e; }
+.dot.gateway { background-color: #ef4444; }
+.dot.service { background-color: #3b82f6; }
+.dot.db { background-color: #f59e0b; }
