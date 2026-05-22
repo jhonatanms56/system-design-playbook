@@ -11,6 +11,8 @@ This collection of documentation is designed to be a living knowledge base for s
 - [Performance](#performance)
 - [Reliability](#reliability)
 - [Database](#database)
+- [Cache](#cache)
+- [Messaging](#messaging)
 - [Deployment](#deployment)
 - [Security](#security)
 - [Frontend](#frontend)
@@ -49,11 +51,24 @@ Circuit breakers, retries with exponential backoff, bulkhead pattern, and chaos 
 ### [Database Optimization](database/optimization/database-optimization.md)
 Connection pool management, query optimization, indexing strategies, read replicas, and sharding.
 
-### [Caching](database/caching/caching-strategies.md)
-Multi-level caching, cache patterns, cache invalidation, and distributed caching.
-
 ### [Scaling](database/scaling/database-scaling.md)
 Read replicas, sharding, partitioning, and database selection criteria.
+
+## Cache
+
+### [Caching Strategies](cache/caching-strategies.md)
+Multi-level caching, cache patterns (Cache-Aside, Write-Through), invalidation strategies, and distributed caching.
+
+### [Redis Fundamentals](cache/redis-fundamentals.md)
+In-memory data structures, persistence options, high availability, and common use cases for Redis.
+
+## Messaging
+
+### [Kafka Fundamentals](messaging/kafka-fundamentals.md)
+Distributed event streaming, topics, partitions, consumer groups, and high-throughput architecture.
+
+### [RabbitMQ Fundamentals](messaging/rabbitmq-fundamentals.md)
+Advanced Message Queuing Protocol (AMQP), exchanges, queues, bindings, and reliable message routing.
 
 ## Deployment
 
@@ -132,8 +147,18 @@ Detailed case study of handling 10x traffic spike, including root cause analysis
 
 ### Database
 - **Optimization:** Indexing, query optimization, connection pooling
-- **Scaling:** Read replicas, sharding, caching
+- **Scaling:** Read replicas, sharding, partitioning
 - **Performance:** Materialized views, partitioning
+
+### Cache
+- **Strategies:** Cache-aside, write-through, write-behind
+- **Redis:** Data structures, persistence, high availability
+- **Invalidation:** TTL, LRU, LFU, write-back
+
+### Messaging
+- **Kafka:** Event streaming, partitions, consumer groups
+- **RabbitMQ:** Exchanges (Direct, Topic, Fanout), AMQP
+- **Patterns:** Pub/Sub, Point-to-Point, Request-Response
 
 ### Deployment
 - **Kubernetes:** Deployments, services, ingress, HPA
@@ -184,21 +209,23 @@ This is a living documentation repository. To contribute:
 1. Frontend Architecture
 2. Monitoring Fundamentals
 3. Database Optimization
+4. Caching Strategies
 
 ### Intermediate
 1. Latency & Throughput
 2. Scalability Fundamentals
 3. OAuth2 and JWT
+4. Redis & RabbitMQ
 
 ### Advanced
 1. Fault Tolerance
 2. Bottleneck Identification
-3. Real-World Scenarios
+3. Kafka & Event Streaming
+4. Real-World Scenarios
 
 ## Roadmap
 
 ### Planned Additions
-- [ ] Message Queues (Kafka, RabbitMQ)
 - [ ] Event-Driven Architecture
 - [ ] Microservices Patterns
 - [ ] API Design (REST, GraphQL, gRPC)
@@ -231,6 +258,8 @@ This is a living documentation repository. To contribute:
 - [Microsoft Azure Architecture Center](https://docs.microsoft.com/en-us/azure/architecture/)
 
 ### Tools
+- **Caching:** Redis, Memcached
+- **Messaging:** Kafka, RabbitMQ, Google Pub/Sub, AWS SQS
 - **Monitoring:** Prometheus, Grafana, Datadog, New Relic
 - **Tracing:** Jaeger, Zipkin, AWS X-Ray
 - **Load Testing:** JMeter, Gatling, k6
